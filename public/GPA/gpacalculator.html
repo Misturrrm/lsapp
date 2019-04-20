@@ -1,0 +1,158 @@
+
+
+<HTML>
+<head>
+<script src="gpa.js"></script>  
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+</head>
+<style>
+ 
+
+ 
+div{
+    margin: 50px;
+    border: 2px solid;
+    text-align: center;
+    width: 400px;
+    padding: 20px;
+    background: lightgreen;
+}
+
+#error{
+    color: red;
+}
+ </style>
+ 
+</head>
+<body>
+<a href = "/dashboard" class= "btn btn-default"><span class="glyphicon glyphicon-circle-arrow-left"></span></a>
+    <div align="center">
+        
+            <img align= "center" class="" width = "100" length = "75"      
+            src="/storage/cover_images/AUN.jpg">
+     
+     <h1>GPA Calculator</h1>
+    
+
+     <form>
+     <input type="text" id="cr" placeholder="Course Code"><br>
+     <input type="number" id="mr" placeholder="Mark"><br>
+     <input type="number" id="ch" placeholder="Credit Hours">
+     </form>
+     <button onclick="addRecord()">Add a record</button><br>
+     <button onclick="refreshElement()">Reset</button>
+  
+     <p id="error"><p>
+ <table table class="table table-striped" border = 1>
+     <tr>
+         <td class="r" id="cn1"></td>
+         <td class="r" id="ch1"></td>        
+         <td class="r" id="cm1"></td>
+         <td class="r" id="gr1"></td>
+         <td class="r" id="gp1"></td>
+         <td class="r" id="tp1"></td>
+         
+
+     <tr>
+         <td class="rt" id="Scn">Total Marks</td>
+         <td class="rt" id="tcr"></td>
+         <td class="rt" id="t"></td>
+         <td class="rt"></td>
+         <td class="rt"></td>
+         <td class="rt" id="tpo"></td>
+         
+
+     </tr>
+     <tr>
+         <td class="rt" id="cgpa"></td>
+         
+     </tr>
+    
+ </table>
+ 
+ 
+ 
+</div>
+
+
+<h3 align = "center"><strong> AUN Grading Scheme</strong> </h3>
+      
+      <table size = "8" class="table">
+          
+          <tbody>
+            <tr class = "info">
+              <td>0-59%</td>
+              <td>F</td>
+              <td>0</td>
+             
+            </tr> 
+      
+            <tr >
+              <td>60-69%</td>
+              <td>D</td>
+              <td>1.0</td>
+            </tr>
+      
+            <tr class="info">
+              <td>70-74%</td>
+              <td>C</td>
+              <td>2.0</td>
+            
+            </tr>
+      
+            <tr >
+              <td>75-79%</td>
+              <td>C+</td>
+              <td>2.3</td>
+              
+            </tr>
+      
+            <tr class="info">
+              <td>80-83%</td>
+              <td>B-</td>
+              <td>2.7</td>
+              
+            </tr>
+      
+            <tr >
+              <td>84-86%</td>
+              <td>B</td>
+              <td>3.0</td>
+              
+            </tr>
+
+            <tr class= "info" >
+                <td>87-89%</td>
+                <td>B+</td>
+                <td>3.3</td>
+                
+            </tr>
+            <tr >
+                    <td>90-94%</td>
+                    <td>A-</td>
+                    <td>3.7</td>
+                    
+            </tr>
+
+            <tr class = "info">
+                    <td>95-100%</td>
+                    <td>A</td>
+                    <td>4.0</td>
+                    
+                  </tr>
+      
+      <script>
+    
+    displayCourses();
+    
+    </script>
+ 
+</body>
+
+</HTML>
